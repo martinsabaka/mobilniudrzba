@@ -9,10 +9,11 @@ return [
 	'supportT' => 'PODPORA PRO KRITICKÉ PROCESY 24/7',
 	'supportS' => 'Naše řešení jsou používána pro automatizaci kritických procesů v mnoha výrobních závodech po celém světě. Garantujeme jim podporu 24/7.',
 
-	'referralsT' => 'PROJEKTY V 15 ZEMÍCH NA 3 KONTINENTECHH',
+	'referralsT' => 'PROJEKTY V 15 ZEMÍCH NA 3 KONTINENTECH',
 	'referralsS' => 'Naše řešení se stala firemním standardem pro vícero globálních výrobních korporací a s úspěchem je využívají i střední a menší firmy.',
 
 	'stvs' => 'Středoslovenská vodárenská',
+	'projects' => 'Projekty',
 ];
 
 ?>

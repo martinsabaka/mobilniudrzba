@@ -10,8 +10,6 @@
     @include('includes.head')
     <!-- Custom styles for this template -->
 	<link href="{{ asset('css/referralsStyle.css') }}" rel="stylesheet">
-	<!-- Scroll.js JavaScript -->
-	<script src="{{ asset('js/scroll.js') }}"></script>
 </head>
 <body>
 	<!--Head-->
@@ -39,11 +37,12 @@
 				<div class="row">
 					<div class="col-lg-6" id="text">
 						<div class="mainText" id='referralText'>
-							<h4>Zákazníci a odvetvia</h4><p>Riešenie PROCE55 Maintenance priebežne vyvíja East-Gate viac ako 13 rokov.</p><p>Naše riešenie sa používa na riadenie kritických procesov, najmä v oblasti výroby, údržby a logistiky</p><ul><li><span style="color: rgb(34, 34, 34);">viac ako 20 multinárodných korporácií,</span>&nbsp;</li><li>v desiatkach výrobných závodoch,</li><li>v 15 krajinách na 3 kontinentoch.</li></ul><p>Implementovali sme riešenia vo veľkých globálnych korporáciách, ako i v silných regionálnych firmách. Naši zákazníci pôsobia v rôznych odvetviach:</p><ul><li>Automobilový priemysel</li><li>Elektrotechnika&nbsp;</li><li>Strojárstvo&nbsp;</li><li>Výroba a montáž káblov&nbsp;</li><li>Potravinársky priemysel&nbsp;</li><li>Telekomunikácie&nbsp;</li><li>Poskytovatelia verejných služieb</li></ul><p><a href="http://www1.east-gate.eu/sk/zakaznici" target="_blank" style="background-color: rgb(255, 255, 255); color: rgb(226, 0, 38);">Zákazníci East-Gate</a></p>
+							{!! $post->content !!}
+							
 						</div>
 					</div>
 					<div class="col-lg-6" id="pics">
-						<h4>Projekty</h4>
+						<h4>{{ __('services.projects') }}</h4>
 						<img src="../img/skoda.png" id="skoda">
 						<img src="../img/tdk.png" class="normal-size">
 						<img src="../img/nkt.png" class="normal-size">

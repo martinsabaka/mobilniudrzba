@@ -28,6 +28,8 @@
 
     <!--footer-->
     @include('includes.footer')
+    <!-- jQuery library -->
+    @include('includes.jquery')
 
 </body>
 </html>

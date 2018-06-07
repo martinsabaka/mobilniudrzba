@@ -24,6 +24,8 @@ Edit Blog
     <!-- Include stylesheet -->
     <link href="https://cdn.quilljs.com/1.3.5/quill.snow.css" rel="stylesheet">
 
+    <!-- jQuery library -->
+    @include('includes.jquery')
     
     <div class="form-group" id='blogTitle'>
         {{ Form::label('title', 'Title') }}
@@ -44,23 +46,24 @@ Edit Blog
         
     <!-- Save button with ajax call to save edited post -->
     <script>
-
-        $('#insertDB').click(function(){
-            var url = '{{ route('editBlog', ['id' => $post->id]) }}';
-            var token = '{{ Session::token() }}';
-            var title = String($('#titleField').val());
-            console.log(title, quill.container.firstChild.innerHTML);
-            
-            $('#success').css("display", "none");
-            $.ajax({
-                method: 'POST',
-                dataType: "json",
-                url: url,
-                data: { blogTitle: title, body: quill.container.firstChild.innerHTML, blogId: {{ $post->id }}, _token: token },
-             })
-            .done(function(msg) {
-                $('#success').css("display", "block");
-            });      
+        $(document).ready(function() { 
+            $('#insertDB').click(function(){
+                var url = '{{ route('editBlog', ['id' => $post->id]) }}';
+                var token = '{{ Session::token() }}';
+                var title = String($('#titleField').val());
+                console.log(title, quill.container.firstChild.innerHTML);
+                
+                $('#success').css("display", "none");
+                $.ajax({
+                    method: 'POST',
+                    dataType: "json",
+                    url: url,
+                    data: { blogTitle: title, body: quill.container.firstChild.innerHTML, blogId: {{ $post->id }}, _token: token },
+                 })
+                .done(function(msg) {
+                    $('#success').css("display", "block");
+                });      
+            });
         });
     </script>
 

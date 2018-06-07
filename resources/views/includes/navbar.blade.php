@@ -23,7 +23,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('blog') }}">blog</a>
                         </li>
+
                         <!-- SEARCH -->
+                        
                         <div class="search-container">
                             <form action="/search" method="GET">
                                 <div class="input-group">
@@ -34,13 +36,8 @@
                                 </div>
                             </form>
                         </div>
-                        <script>
-                            $('.btn-search').click(function() {
-                                var search = $('#top-form');
-                                console.log(search.val());
-                            });
-                        </script>
-
+                        
+                    
                             @guest
                               <li class="right-menu-navbar"><a href="{{ route('login') }}">{{ __('navbar.login') }}</a></li>
                               <li class="right-menu-navbar"><a href="{{ route('register') }}">{{ __('navbar.register') }}</a></li>
@@ -93,12 +90,15 @@
                                 <a class="dropdown-item" href="{{ route('application/unique-features') }}">{{ __('navbar.unique_features') }}</a>
                                 <a class="dropdown-item" href="{{ route('application/assets') }}">{{ __('navbar.assets') }}</a>
                                 <a class="dropdown-item" href="{{ route('application/how-works') }}">{{ __('navbar.proce55_how_works') }}</a>
+                                <a class="dropdown-item" href="{{ route('innovation') }}">{{ __('navbarApp.innovation') }}</a>
                                 <a class="dropdown-item" href="{{ route('application/sap-integration') }}">{{ __('navbar.sap_integration') }}</a>
                                 <a class="dropdown-item" href="{{ route('prod-sys-integration') }}">{{ __('navbar.prod_sys_integration') }}</a>
                                 <a class="dropdown-item" href="{{ route('visualization') }}">{{ __('navbar.visualization') }}</a>
+                                <a class="dropdown-item" href="{{ route('mobility') }}">{{ __('navbarApp.mobility') }}</a>
                                 <a class="dropdown-item" href="{{ route('technical-aspects') }}">{{ __('navbar.technical_aspects') }}</a>
                                 <a class="dropdown-item" href="{{ route('application/story') }}">{{ __('navbar.story') }}</a>
                                 <a class="dropdown-item" href="{{ route('functionality') }}">{{ __('navbar.functionality') }}</a>
+                                <a class="dropdown-item" href="{{ route('industry-4-0') }}">{{ __('navbarApp.industry40') }}</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -111,20 +111,6 @@
                                 <a class="dropdown-item" href="{{ route('support') }}">{{ __('navbar.support') }}</a>
                             </div>
                         </li>
-                        <!--
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle navbarDropdownMenu" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                {{ __('navbar.knowledge_base_up') }}
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">{{ __('navbar.news') }}</a>
-                                <a class="dropdown-item" href="{{ route('blog') }}">{{ __('navbar.blog') }}</a>
-                                <a class="dropdown-item" href="#">{{ __('navbar.information') }}</a>
-                                <a class="dropdown-item" href="#">{{ __('navbar.answers') }}</a>
-                                <a class="dropdown-item" href="{{ route('referrals') }}">{{ __('navbar.successful_projects') }}</a>
-                            </div>
-                        </li>
-                    -->
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('referrals') }}">{{ __('navbar.customers_up') }}</a>
                         </li>
@@ -136,6 +122,13 @@
             </div>
             
         </nav>
+        <!--Search-->
+        <script>
+            $('.btn-search').click(function() {
+                var search = $('#top-form');
+                console.log(search.val());
+            });
+        </script>
 
         <script>
          $(document).ready(function(){

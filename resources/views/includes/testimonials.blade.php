@@ -1,7 +1,7 @@
 <!-- Testimonials -->
     <section class="testimonials text-center">
       <div class="container">
-        <h3 class="mb-5">Zákazníci v 15 krajinách na 3 kontinentoch<br><small>sa spoliehajú na PROCE55</small></h3>
+        <h3 class="mb-5">{{ __('intro.customers_title') }}<br><small>{{ __('intro.customers_subtitle') }}</small></h3>
         <div class="row">
             <div id="demo" class="carousel slide" data-ride="carousel">
               <ul class="carousel-indicators">
@@ -66,7 +66,7 @@
                     <img class="img-fluid mb-3" src="../img/coavis.png" alt="">
                   </div>
                   <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img class="img-fluid mb-3" src="../img/nobel.jpg" alt="">
+                    <img class="img-fluid mb-3 smallerImg" src="../img/nobel.jpg" alt="">
                   </div>
                   <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                     <img class="img-fluid mb-3" src="../img/hanwa.png" alt="">

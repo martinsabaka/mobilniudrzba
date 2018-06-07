@@ -13,6 +13,7 @@ return [
 	'referralsS' => 'Naše riešenia sa stali firemným štandardom pre viaceré globálne výrobné korporácie a s úspechom ich využívajú aj stredné a menšie firmy.',
 
 	'stvs' => 'Stredoslovenská vodárenská',
+	'projects' => 'Projekty',
 ];
 
 ?>

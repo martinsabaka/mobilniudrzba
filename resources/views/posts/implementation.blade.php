@@ -1,4 +1,4 @@
-@extends('layouts.subpageDefault')
+@extends('layouts.subpageNoImgZoom')
 
 @section('title')
 {!! $post->title !!}

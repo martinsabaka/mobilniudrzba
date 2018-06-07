@@ -12,7 +12,7 @@ return [
 	'about_us' => 'O nás',
 	'our_story' => 'Náš príbeh',
 	'what_makes_us_different' => 'Čím sa odlišujeme',
-	'our_team' => 'Náš tým',
+	'our_team' => 'Náš tím',
 	'where_we_are' => 'Kde pôsobíme',
 	'contact' => 'Kontakt',
 	'news' => 'Novinky',

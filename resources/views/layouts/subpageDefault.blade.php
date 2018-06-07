@@ -4,8 +4,6 @@
     @include('includes.head')
     <!-- Custom styles for this template -->
 	<link href="{{ asset('css/subpageStyle.css') }}" rel="stylesheet">
-	<!-- Scroll.js JavaScript -->
-	<script src="{{ asset('js/scroll.js') }}"></script>
 </head>
 <body>
 	<!--Head-->
@@ -37,7 +35,13 @@
 	    <img id="imgBig" src="" alt="" width="1000" />
 	</div>
 
-	<script>
+    <!--footer-->
+    @include('includes.footer')
+
+    <!-- jQuery library -->
+    @include('includes.jquery')
+
+    <script>
 		$(".row img").click(function(){		
 			$("#imgBig").attr("src", $(this).attr("src"));
 	    	$("#zoom").show();
@@ -50,11 +54,5 @@
 		});		
 
 	</script>
-
-
-    <!--footer-->
-    @include('includes.footer')
-
-
 </body>
 </html>

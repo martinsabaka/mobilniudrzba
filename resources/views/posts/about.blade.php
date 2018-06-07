@@ -47,6 +47,8 @@
 		    <img id="imgSmall" src="{{ asset('img/Nas1CZ.JPG') }}">
 		@elseif (App::getLocale() == 'sk')
 			<img id="imgSmall" src="{{ asset('img/Nas1.jpg') }}">
+		@elseif (App::getLocale() == 'en')
+			<img id="imgSmall" src="{{ asset('img/Nas1EN.jpg') }}">
 		@endif
 		
 	@elseif ($post->url == 'what-makes-us-different')

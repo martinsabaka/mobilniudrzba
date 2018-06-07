@@ -12,8 +12,58 @@
 			@endif	
 		</h2>
 	</div>
+	<!-- added -->
+	<div class="row" id="referral-logos-row">
+		@if($post->url == 'skoda-auto')
+			<img src="{{ asset('img/referrals/skoda.png') }}">
+		@elseif($post->url == 'tdk')
+			<img src="{{ asset('img/referrals/tdk.png') }}">
+		@elseif($post->url == 'nkt-cables')
+			<img src="{{ asset('img/referrals/nkt.png') }}">
+		@elseif($post->url == 'fatra')
+			<img src="{{ asset('img/referrals/fatra.png') }}">
+		@elseif($post->url == 'kyb')
+			<img src="{{ asset('img/referrals/kyb.png') }}">
+		@elseif($post->url == 'lasselsberger')
+			<img src="{{ asset('img/referrals/lassel.jpg') }}">
+		@elseif($post->url == 'coavis')
+			<img src="{{ asset('img/referrals/coavis.png') }}">
+		@elseif($post->url == 'saint-gobain')
+			<img src="{{ asset('img/referrals/saint.jpg') }}">
+		@endif
+		<img id="proce55-img" src="{{ asset('img/referrals/proce55.png') }}">
+	</div>
+
 	<div class="mainText">
 		{!! $post->content !!}
+	</div>
+
+	<div class="row" id="referral-pics-row">
+		@if($post->url == 'skoda-auto')
+			<img src="{{ asset('img/referrals/skodaPic1.jpg') }}">
+			<img src="{{ asset('img/referrals/skodaPic2.jpg') }}">
+		@elseif($post->url == 'tdk')
+			<img src="{{ asset('img/referrals/tdkPic1.jpg') }}">
+			<img src="{{ asset('img/referrals/tdkPic2.jpg') }}">
+		@elseif($post->url == 'nkt-cables')
+			<img src="{{ asset('img/referrals/nktPic1.jpg') }}">
+			<img src="{{ asset('img/referrals/nktPic2.jpg') }}">
+		@elseif($post->url == 'fatra')
+			<img src="{{ asset('img/referrals/fatraPic1.png') }}">
+			<img src="{{ asset('img/referrals/fatraPic2.png') }}">
+		@elseif($post->url == 'kyb')
+			<img src="{{ asset('img/referrals/kybPic1.jpg') }}">
+			<img src="{{ asset('img/referrals/kybPic2.jpg') }}">
+		@elseif($post->url == 'lasselsberger')
+			<img src="{{ asset('img/referrals/lasselPic1.jpg') }}">
+			<img src="{{ asset('img/referrals/lasselPic2.jpg') }}">
+		@elseif($post->url == 'coavis')
+			<img src="{{ asset('img/referrals/coavisPic1.jpg') }}">
+			<img src="{{ asset('img/referrals/coavisPic2.jpg') }}">
+		@elseif($post->url == 'saint-gobain')
+			<img src="{{ asset('img/referrals/saintPic1.jpg') }}">
+			<img src="{{ asset('img/referrals/saintPic2.jpg') }}">
+		@endif
 	</div>
 @endsection
 

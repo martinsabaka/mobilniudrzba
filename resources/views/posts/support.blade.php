@@ -14,7 +14,7 @@
 	</div>
 	<div class="subtitle">
 		<h5><b>{{ __('services.supportT') }}</b><br><br>
-		<small><b>{{ __('services.supportS') }}7</b></small></h5>
+		<small><b>{{ __('services.supportS') }}</b></small></h5>
 		<br>
 	</div>	
 	<div class="mainText">

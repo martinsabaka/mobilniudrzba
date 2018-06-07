@@ -3,6 +3,9 @@
 <head>
     @include('includes.head')
 
+    <!-- jQuery library -->
+    @include('includes.jquery')
+
     <!-- Custom styles for this template -->
 	<link href="{{ asset('css/subpageStyle.css') }}" rel="stylesheet">
 </head>
@@ -28,5 +31,6 @@
     <!--footer-->
     @include('includes.footer')
 
+    
 </body>
 </html>

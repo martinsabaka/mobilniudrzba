@@ -56,8 +56,18 @@ header.masthead .overlay {
     }
 
 @media (max-width: 768px) {
+      .masthead .col-xl-9 {
+        position: relative;
+        bottom: 8rem;
+      }
       .masthead img {
-        max-width: 500px;
+        max-width: 400px;
+      }
+    }
+@media (max-width: 550px) {
+      .masthead img {
+        max-width: 400px;
+        padding-left: 10px;
       }
     }
 

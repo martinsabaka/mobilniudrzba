@@ -12,6 +12,8 @@ return [
 	'teamS' => 'Spojujeme znalost procesů a branžové know-how s inovativními technologiemi',
 	'whereT' => 'Z EVROPY DO CELÉHO SVĚTA',
 	'whereS' => 'Projekty v 15 zemích na 3 kontinentech',
+	'innovationT' => 'PODPOŘTE SVOU KONKURENČNÍ VÝHODU',
+	'innovationS' => 'Každá inovativní firma má specifické procesy, které jí poskytují konkurenční výhodu. Standardní aplikace typu ERP jsou však zaměřeny na standardní procesy. PROCE55 překonává toto omezení ERP',
 
 	'gallo1' => 'Ivan Gallo',
 	'gallo2' => 'CEO - Zakladatel společnosti, architekt řešení',

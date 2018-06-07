@@ -4,8 +4,6 @@
     @include('includes.head')
     <!-- Custom styles for this template -->
 	<link href="{{ asset('css/subpageNoZoomStyle.css') }}" rel="stylesheet">
-	<!-- Scroll.js JavaScript -->
-	<script src="{{ asset('js/scroll.js') }}"></script>
 </head>
 <body>
 	<!--Head-->
@@ -35,6 +33,7 @@
     <!--footer-->
     @include('includes.footer')
 
-
+    <!-- jQuery library -->
+    @include('includes.jquery')
 </body>
 </html>

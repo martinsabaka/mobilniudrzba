@@ -15,12 +15,6 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-
-
-
-
- 
-
 // app/Http/routes.php
 
 Route::group([
@@ -50,6 +44,9 @@ Route::group([
 	Route::get('/prod-sys-integration', ['as' => 'prod-sys-integration', 'uses' => 'IndexController@getProdSysIntegration']);
 	Route::get('/visualization', ['as' => 'visualization', 'uses' => 'IndexController@getVisualization']);
 	Route::get('/services-overview', ['as' => 'services-overview', 'uses' => 'IndexController@getServicesOverview']);
+	Route::get('/innovation', ['as' => 'innovation', 'uses' => 'IndexController@getInnovation']);
+	Route::get('/industry-4-0', ['as' => 'industry-4-0', 'uses' => 'IndexController@getIndustry']);
+	Route::get('/mobility', ['as' => 'mobility', 'uses' => 'IndexController@getMobility']);
 
 	//Post sub-Routes
 
@@ -87,19 +84,13 @@ Route::group([
 	Route::get('/search', ['as' => 'search', 'uses' => 'IndexController@search']);
 
 	// Following routes are for editing posts
-
 	Route::get('/quill/{id}', ['as' => 'quill', 'uses' => 'PostController@getQuill'])->middleware('admin'); 
-
 	Route::post('/quill/edit', ['as' => 'edit', 'uses' => 'PostController@editPost'])->middleware('admin'); 
-
 	Auth::routes();
-
 	Route::get('/home', 'HomeController@index')->name('home');
-
 	Route::get('/accessDenied', function() {
 	    return view('auth/accessDenied');
 	});
-
 	Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index'])->middleware('admin');
 
 	// Following routes are for dashboard manipulation 
@@ -107,14 +98,11 @@ Route::group([
 
 	//updating blog
 	Route::post('/blog/edit', ['as' => 'editBlog', 'uses' => 'PostController@updateBlog'])->middleware('admin'); 
-
 	Route::post('/blog/create', ['as' => 'createBlog', 'uses' => 'PostController@createBlog'])->middleware('admin'); 
 
 	// Forum part routes
 	Route::resource('/dashboard/blogs', 'BlogController')->middleware('admin'); 
-
 	Route::get('/blog', ['as' => 'blog', 'uses' => 'BlogController@getAllBlogs'])->middleware('customer');
-
 	Route::get('/blog/{id}', ['as' => 'blogPost_detail', 'uses' => 'BlogController@showBlog'])->middleware('customer');
 
 	//create comment
@@ -122,6 +110,5 @@ Route::group([
 
 	//create reply
 	Route::post('/blog/addReply', ['as' => 'addReply', 'uses' => 'ReplyController@addReply'])->middleware('admin'); 
-
 	Route::get('/', ['as' => 'first' ,'uses' => 'IndexController@index']);
 });

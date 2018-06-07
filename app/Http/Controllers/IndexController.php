@@ -13,7 +13,8 @@ class IndexController extends Controller
 {
 
     public function getPost($url)
-    {
+    {   
+
         if (App::isLocale('cs')) {
             $post = DB::table('posts')->select(['id', 'url', 'title_cs as title', 'content_cs as content'])->where('url', $url)->first();
         }
@@ -33,24 +34,70 @@ class IndexController extends Controller
     public function index()
     {
         
-        if (App::isLocale('en')) {
-            return redirect('/cs');
-        }
-        
         return view('layouts/default');
     }
-
+    /*Search*/
     public function search()
     {
-        $text = Input::get('searchText');
+        $text = trim(preg_replace('/ss+/', ' ', str_replace("n", " ", Input::get('searchText'))));
 
-        $posts = DB::table('posts')->select(['id', 'url', 'title_en as title', 'content as content'])->where('content', 'like', '%' . $text . '%')->get();
+        $words = explode(" ", $text);
+
+         
+
+        if (App::isLocale('sk')) {
+            $counter = 0;
+            foreach($words as $word)
+            {
+                if($counter == 0)
+                {
+                    $query = DB::table('posts')->select(['id', 'url', 'title as title', 'content as content'])->where('title', 'like', '%' . $words[0] . '%')->orWhere('content', 'like', '%' . $words[0] . '%');
+                }
+                else 
+                {
+                    $query->where('content', 'like', '%' . $words[$counter] . '%');
+                }
+                $counter++;
+            }
+            $posts = $query->paginate(10);
+        }
+        if (App::isLocale('cs')) {
+            $counter = 0;
+            foreach($words as $word)
+            {
+                if($counter == 0)
+                {
+                    $query = DB::table('posts')->select(['id', 'url', 'title_cs as title', 'content_cs as content'])->where('title_cs', 'like', '%' . $words[0] . '%')->orWhere('content_cs', 'like', '%' . $words[0] . '%');
+                }
+                else 
+                {
+                    $query->where('content', 'like', '%' . $words[$counter] . '%');
+                }
+                $counter++;
+            }
+            $posts = $query->paginate(10);
+        }
+        if (App::isLocale('en')) {
+            $counter = 0;
+            foreach($words as $word)
+            {
+                if($counter == 0)
+                {
+                    $query = DB::table('posts')->select(['id', 'url', 'title_en as title', 'content_en as content'])->where('title_en', 'like', '%' . $words[0] . '%')->orWhere('content_en', 'like', '%' . $words[0] . '%');
+                }
+                else 
+                {
+                    $query->where('content', 'like', '%' . $words[$counter] . '%');
+                }
+                $counter++;
+            }
+            $posts = $query->paginate(10);
+        }
 
 
         return view('search', ['posts' => $posts]);
     }
 
-    /*Application*/
     public function getApplication()
     {
         $post = $this->getPost('application');
@@ -93,7 +140,6 @@ class IndexController extends Controller
         return view('posts/application', ['post' => $post]);
     }
 
-    /*Implementation*/
     public function getImplementation()
     {
         $post = $this->getPost('implementation');
@@ -116,14 +162,12 @@ class IndexController extends Controller
         return view('posts/application', ['post' => $post]);
     } 
 
-    /*Functionality*/
     public function getFunctionality()
     {
         $post = $this->getPost('functionality');
         return view('posts/functionality', ['post' => $post]);
     }
 
-    /*Referrals*/
     public function getReferrals()
     {
         $post = $this->getPost('referrals');
@@ -177,6 +221,24 @@ class IndexController extends Controller
     {
         $post = $this->getPost('services-overview');
         return view('posts/servicesOverview', ['post' => $post]);
+    }
+
+    public function getInnovation()
+    {
+        $post = $this->getPost('innovation');
+        return view('posts/innovation', ['post' => $post]);
+    }
+
+    public function getIndustry()
+    {
+        $post = $this->getPost('industry-4-0');
+        return view('posts/industry', ['post' => $post]);
+    }
+
+    public function getMobility()
+    {
+        $post = $this->getPost('mobility');
+        return view('posts/mobility', ['post' => $post]);
     }
 
     //Customer Details

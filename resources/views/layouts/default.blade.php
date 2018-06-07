@@ -41,57 +41,7 @@
     <!--footer-->
     @include('includes.footer')
 
-    <!-- jQuery smooth scroll -->
-    <script>
-    	$(document).ready(function() {
-    		$('#icon1').click(function() {
-    			var path = $('#showcase1').offset().top;
-    			console.log(path);
-    			$('html').animate({scrollTop:path},1000);
-    		});
-
-    		$('#icon2').click(function() {
-    			var path = $('#showcase2').offset().top;
-    			console.log(path);
-    			$('html').animate({scrollTop:path},1000);
-    		});
-
-    		$('#icon3').click(function() {
-    			var path = $('#showcase3').offset().top;
-    			console.log(path);
-    			$('html').animate({scrollTop:path},1000);
-    		});
-
-    		$('#icon4').click(function() {
-    			var path = $('#showcase4').offset().top;
-    			console.log(path);
-    			$('html').animate({scrollTop:path},1000);
-    		});
-
-    		$('#icon5').click(function() {
-    			var path = $('#showcase5').offset().top;
-    			console.log(path);
-    			$('html').animate({scrollTop:path},1000);
-    		});
-
-    		$('#icon6').click(function() {
-    			var path = $('#showcase6').offset().top;
-    			console.log(path);
-    			$('html').animate({scrollTop:path},1000);
-    		});
-
-    		$('#icon7').click(function() {
-    			var path = $('#showcase7').offset().top;
-    			console.log(path);
-    			$('html').animate({scrollTop:path},1000);
-    		});
-
-    		$('#icon8').click(function() {
-    			var path = $('#showcase8').offset().top;
-    			console.log(path);
-    			$('html').animate({scrollTop:path},1000);
-    		});
-    	});
-    </script>
+    <!-- jQuery library -->
+    @include('includes.jquery')
 </body>
 </html>

@@ -13,8 +13,8 @@
 		</h2>
 	</div>
 	<div class="subtitle">
-			<h5><b>VÁŠEŇ A KOMPETENCIA</b><br><br>
-			<small><b>Spájame znalosť procesov a branžové know-how s inovatívnymi technológiami</b></small></h5>
+			<h5><b>{{ __('aboutPages.teamT') }}</b><br><br>
+			<small><b>{{ __('aboutPages.teamS') }}</b></small></h5>
 			<br>
 		
 	</div>	
